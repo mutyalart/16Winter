@@ -12,10 +12,12 @@ change sbt plugin
 
 - http://ensime.github.io/build_tools/sbt/
 
+
 Ensime http://ensime.github.io/editors/emacs/userguide/
 
+ensime file generation for each project 
+$sbt ensimeConfig
 
 Enisme shortcuts:
-
 
 

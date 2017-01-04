@@ -6,8 +6,7 @@
 
   - A Class is a blue print of objects
 
-```
-scala
+```scala
  	class ChecksumAccumulator {
 	  // class definition
 }

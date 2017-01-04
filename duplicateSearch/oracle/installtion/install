@@ -1,0 +1,214 @@
+--Sources 
+http://dbaora.com/install-oracle-11g-release-2-11-2-on-centos-linux-7/
+http://seriousbirder.com/blogs/linux-understanding-shmmax-and-shmall-settings/
+http://blog.ronnyegner-consulting.de/2009/10/28/calculate-required-kernel-parameters-for-running-oracle-11g-release-2-on-linux/
+
+--update and install packages
+-------------------------------------------------------------------------------------------
+sudo yum update
+
+sudo yum install \
+dos2unix \
+wget \
+nano \
+zip \
+unzip \
+screen \
+-y
+
+sudo yum install binutils \
+elfutils-libelf \
+elfutils-libelf-devel \
+gcc \
+gcc-c++ \
+glibc \
+glibc-common \
+glibc-devel \
+glibc-headers \
+ksh \
+libaio \
+libaio-devel \
+libgcc \
+libstdc++ \
+libstdc++-devel \
+make \
+sysstat \
+unixODBC \
+unixODBC-devel \
+-y
+
+sudo yum install \
+xhost \
+xauth \
+xorg-x11-xauth \
+xorg-x11-fonts-* \
+xorg-x11-utils \
+xclock \
+-y
+
+-- rlwrap
+wget http://utopia.knoware.nl/~hlub/uck/rlwrap/rlwrap-0.42.tar.gz
+gunzip rlwrap*.tar.gz
+tar -xvf rlwrap*.tar
+cd rlwrap*
+./configure
+make
+make check
+make install
+
+-- logout and login a couple of times until you get no X11 Xauthority warnings
+
+--oracle settings
+-------------------------------------------------------------------------------------------
+--Add groups
+sudo /usr/sbin/groupadd -g 501 oinstall
+sudo /usr/sbin/groupadd -g 502 dba
+sudo /usr/sbin/groupadd -g 503 oper
+
+--Add user Oracle
+sudo /usr/sbin/useradd -u 502 -g oinstall -G dba,oper oracle
+
+--Change password for user
+sudo passwd oracle
+
+--Add kernel parameters to /etc/sysctl.conf
+kernel.shmmni = 4096 
+kernel.shmmax = 4398046511104
+kernel.shmall = 1073741824
+kernel.sem = 250 32000 100 128
+
+fs.aio-max-nr = 1048576
+fs.file-max = 6815744
+net.ipv4.ip_local_port_range = 9000 65500
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048586
+
+--Apply kernel parameters
+sudo /sbin/sysctl -p
+
+--Add following lines to set shell limits for user oracle in file /etc/security/limits.conf
+#Oracle settings
+oracle   soft   nproc    131072
+oracle   hard   nproc    131072
+oracle   soft   nofile   131072
+oracle   hard   nofile   131072
+oracle   soft   core     unlimited
+oracle   hard   core     unlimited
+oracle   soft   memlock  50000000
+oracle   hard   memlock  50000000
+
+--The “/etc/hosts” file must contain a fully qualified name for the server.
+127.0.0.1 centos7 centos7.domain.com localhost localhost.localdomain
+
+--Modify /home/oracle/.bash_profile 
+# Oracle Settings
+export TMP=/tmp
+
+export ORACLE_HOSTNAME=centos7.domain.com
+export ORACLE_UNQNAME=NDD
+export ORACLE_BASE=/ora01/app/oracle
+export ORACLE_HOME=$ORACLE_BASE/product/11.2.0.4/db_1
+export ORACLE_SID=NDD
+
+PATH=/usr/sbin:$PATH:$ORACLE_HOME/bin
+
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib;
+export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib;
+
+alias cdob='cd $ORACLE_BASE'
+alias cdoh='cd $ORACLE_HOME'
+alias tns='cd $ORACLE_HOME/network/admin'
+alias envo='env | grep ORACLE'
+
+alias sqlplus='rlwrap sqlplus'
+
+umask 022
+
+--Create directory structure
+sudo mkdir -p /ora01/app
+sudo chown oracle:oinstall /ora01/app
+sudo chmod 775 /ora01/app
+
+--Create ORACLE_BASE directory for oracle
+sudo mkdir -p /ora01/app/oracle
+sudo chown oracle:oinstall /ora01/app/oracle
+sudo chmod 775 /ora01/app/oracle
+
+--Create ORACLE_HOME directory for oracle
+sudo mkdir -p /ora01/app/oracle/product/11.2.0.4/db_1
+sudo chown oracle:oinstall -R /ora01/app/oracle
+
+--Disable secure linux by editing the “/etc/selinux/config” file, making sure the SELINUX flag is set as follows. It requires REBOOT to be effective !!!
+SELINUX=permissive
+sudo reboot
+
+--In Centos Linux 7 /tmp data is stored on tmpfs which consumes memory and is too small. To revert it back to storage just run following command and REBOOT machine to be effective.
+sudo systemctl mask tmp.mount
+sudo reboot
+
+--swap spacels /var/swapfile (16G+)
+sudo dd if=/dev/zero of=/var/swapfile bs=1M count=17000 &&
+sudo chmod 600 /var/swapfile &&
+sudo mkswap /var/swapfile &&
+echo /var/swapfile none swap defaults 0 0 | sudo tee -a /etc/fstab &&
+sudo swapon -a
+
+--JAVA
+sudo yum install java -y
+
+--=============================================
+su - oracle
+
+--unzip software 11.2.0.4
+unzip p13390677_112040_Linux-x86-64_1of7.zip
+unzip p13390677_112040_Linux-x86-64_2of7.zip
+
+alias envo cdob cdoh tns
+alias envo='env | grep ORACLE'
+alias cdob='cd $ORACLE_BASE'
+alias cdoh='cd $ORACLE_HOME'
+alias tns='cd $ORACLE_HOME/network/admin'
+
+--run installation from install directory
+cd ~/database
+./runInstaller
+
+-- follow the installation until an error will appear, then change the follwing in
+-- /ora01/app/oracle/product/11.2.0.4/db_1/sysman/lib/ins_emagent.mk
+$(MK_EMAGENT_NMECTL) -lnnz11
+-- click on retry
+
+--run the scripts are requested (as sudo!)
+sudo /ora01/app/oraInventory/orainstRoot.sh
+sudo /ora01/app/oracle/product/11.2.0.4/db_1/root.sh
+
+-- post installation
+
+--oratab
+NDD:/ora01/app/oracle/product/11.2.0.4/db_1:Y  -- in /etc/oratab
+
+sqlplus sys as sysdba
+
+startup/shutdown/shutdown immediate
+
+
+-- TNS LISTENER 
+nano /ora01/app/oracle/product/11.2.0.4/db_1/network/admin/listener.ora
+
+add...
+
+SID_LIST_LISTENER =
+  (SID_LIST =
+     (SID_DESC =
+         (SID_NAME = NDD)
+         (ORACLE_HOME = /ora01/app/oracle/product/11.2.0.4/db_1)
+        )
+  )
+
+-- start/stop service
+lsnrctl start/stop
+
+
+

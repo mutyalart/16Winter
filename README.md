@@ -2,6 +2,6 @@
 
 Projects
 
--RAM
--NDD
--Visualisation
+Payment Risk analysis and fraud detection  
+
+Visualisation using d3js

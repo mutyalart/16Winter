@@ -4,6 +4,7 @@
 -        Int         32-bit signed two's complement integer (-231 to 231 - 1, inclusive)
 -        Long        64-bit signed two's complement integer (-263 to 263 - 1, inclusive)
 -        Char        16-bit unsigned Unicode character (0 to 216 - 1, inclusive)
+	- val a = 'A'
 -        String      a sequence of Chars
 -        Float       32-bit IEEE 754 single-precision float
 	- val x = 10e0f

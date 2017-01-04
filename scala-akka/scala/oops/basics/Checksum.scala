@@ -11,7 +11,8 @@ class Checksum(args: Array[String]) {
 
 	def p(){
 
-		val acc = new Checksum(Array("10","11"))
+		val acc = new Checksum(Array("10","11")) // Class() is optional for zero input parameters
+
 		for (arg <- args)
   			acc.add(arg.toInt)
 			println(acc.s)

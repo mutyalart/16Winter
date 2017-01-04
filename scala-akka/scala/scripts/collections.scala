@@ -52,4 +52,7 @@ p(s"fold to left ${list3.foldLeft(100)(findMax)} it takes input 100")
 
 
 
+// Collection Map 
+
+
 

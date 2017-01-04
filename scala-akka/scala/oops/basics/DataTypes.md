@@ -6,5 +6,7 @@
 -        Char        16-bit unsigned Unicode character (0 to 216 - 1, inclusive)
 -        String      a sequence of Chars
 -        Float       32-bit IEEE 754 single-precision float
+	- val x = 10e0f
 -        Double      64-bit IEEE 754 double-precision float
+	- val y = 10e5d
 -        Boolean     true or false

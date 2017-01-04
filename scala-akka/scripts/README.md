@@ -17,13 +17,13 @@ Chapter 3:
   *  strings can be concatnated to immutable lists "strin"g :: list()
   *  list4.map(_.toString) 
   *  functions can be forwarded to other functions
-``` def findMax(x : Int, y : Int) = {
+``` scala 
+def findMax(x : Int, y : Int) = {
     	val winner =  x max y
     	p (s"compared $x and $y and winner is $winner")
     	winner
      }
-
 val result = list3.reduceLeft(findMax)
- ```
+```
 
 

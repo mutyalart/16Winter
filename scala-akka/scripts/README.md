@@ -10,5 +10,20 @@ Chapter 2:
   * for (arg <- args)
 
 Chapter 3:
-  *  
+  *  print(s"reduce left starts from left and reduces the list using the function ${list4.reduceLeft(_+_)}")
+  *  Array("zero","bigb","smalc") and  Array.apply("One","trw","tree") are similar
+  *  All strings are of java.lang.string
+  *  List() and Nil are same
+  *  strings can be concatnated to immutable lists "strin"g :: list()
+  *  list4.map(_.toString) 
+  *  functions can be forwarded to other functions
+``` def findMax(x : Int, y : Int) = {
+    	val winner =  x max y
+    	p (s"compared $x and $y and winner is $winner")
+    	winner
+     }
+
+val result = list3.reduceLeft(findMax)
+ ```
+
 

@@ -16,7 +16,7 @@
 
 _Algorithm_
 
-   - loop of all features : (life)   
+	- loop of all features : (life)   
 		* light -> plant -> size  
 		*       -> animal -> selfconsiousness  
 	- select best attribute (photo synthesis)

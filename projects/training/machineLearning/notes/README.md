@@ -30,6 +30,7 @@ _Entropy_ (Degree of randomness)
 - Information gain is a measure of decrease in randomness  
 - Entropy gain = total entropy - sum of entropy of each value of attribute( proportionality of data * entropy of training set for this value)
 
+Splitting on entropy
 _Bias_ (Preference)  
 ---
 

@@ -1,7 +1,7 @@
 ## Decision Trees
 
 
-class sklearn.tree.DecisionTreeClassifier(
+class sklearn.tree.DecisionTreeClassifier
 
 - criterion='gini' 
 	- _gini_ : measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled.

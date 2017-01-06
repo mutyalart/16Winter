@@ -25,7 +25,7 @@ _Algorithm_
 - sort training data to leaves 
 - iterate till all data is sorted into leaves
 
-_Entropy_
+_Entropy_ (Degree of randomness)
 ---
 - Information gain is a measure of decrease in randomness  
 - Entropy gain = total entropy - sum of entropy of each value of attribute( proportionality of data * entropy of training set for this value)
@@ -41,3 +41,8 @@ Two type of Bias
 	* good splits at top divides data well
 	* correct / incorrect of decision trees
 	* shorter trees 
+ Descision trees can also be used for continous variables by having range on attributes. We can also use different ranges of the attributes in the decision trees
+
+- we stop the iteration when data is classified, 
+- no more attributes to classify
+- no overfitting,  pruning of leaves should be done for overfitting

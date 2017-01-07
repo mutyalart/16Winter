@@ -81,7 +81,9 @@ Installation:
 - SBT download
 - apache maven install
 - IDE & Notebook
-	- define env variables, (all caps) pyspark_driver_python=ipython , pyspark_driver_python_opts='notebook'
+	- define env variables, (all caps)   
+ `pyspark_driver_python=ipython    
+  pyspark_driver_python_opts='notebook'`
 
 - RSTUDIO
 	
@@ -91,7 +93,9 @@ Testing setup :
 
 `
 $spark-shell  
-$sparkR
+
+$sparkR  
+
 `
 
 - Run inbuilt examples:

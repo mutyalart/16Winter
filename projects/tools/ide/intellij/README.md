@@ -4,9 +4,9 @@
 ## Shortcuts
 
 ---
-key shortcut | 
-------- | -------
 
+key shortcut | Definition 
+------- | -------
 Ctrl+Shift+A | find action by name
 Ctrl+TAB | switch between tool windows
 ALT+Home | Navigation bar 

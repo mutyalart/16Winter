@@ -18,9 +18,9 @@ Grief: comes from running away from truth. Accept truth, if it is your fault cov
 
 Happiness is of two types
 
-1) Sensory happiness
+1  Sensory happiness  
         -   5 senses and Mind is also a sensory (imagination and dreams)
-2) Happiness that comes from deep within 
+2  Happiness that comes from deep within 
 - For to attain this silence is important,
 A thought will come sad , happy look at it and do not judge and do not indulge.
 If grief is too hard just see what you are seeing without commentary remember, things that which cause grief are 20% remaining 80% is caused by our commentary and reiterating things. Once you accept that it happend, and be compassionate to the one who caused it whether you are others, for his actions were caused in emotion, bad habit, bad raising, bad wiring of his/her head or just a bad day. Let it go, peace and happiness lies in enjoying this moment.

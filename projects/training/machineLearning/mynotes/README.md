@@ -58,7 +58,14 @@ Descision trees can also be used for continous variables by having range on attr
 ### _Intro:_  
   
 Perptron Neuron:
-	inputs vector of x1,x2,x3 are given, and outputs are given. Neural nets algorithms are used to find the weights w1,w2,w3.
+
+A perceptron classifier is a simple model of a neuron. It has different inputs (x1...xn) with different weights (w1...wn).
+  
+The weighted sum s of these inputs is then passed through a step function f (usually a Heaviside step function).
+
+f(s)={1 if s≥0 
+      0	otherwise
+
 * Can only be used on neural sets
 * will find the result in finite sets
   
@@ -66,6 +73,36 @@ Ways for finding the weights:
   
 - Perceptron rule (Tresholded outputs: above 0)
 - Gradient Descent (unThresholded outputs: )
+
+```python
+from random import choice
+from numpy import array, dot, random
+
+unit_step = lambda x: 0 if x < 0 else 1
+
+training_data = [
+    (array([0,0,1]), 0),
+    (array([0,1,1]), 1),
+    (array([1,0,1]), 1),
+    (array([1,1,1]), 1),
+]
+
+w = random.rand(3)
+errors = []
+eta = 0.2
+n = 100
+
+for i in xrange(n):
+    x, expected = choice(training_data)
+    result = dot(w, x)
+    error = expected - unit_step(result)
+    errors.append(error)
+    w += eta * error * x
+
+for x, _ in training_data:
+    result = dot(x, w)
+    print("{}: {} -> {}".format(x[:2], result, unit_step(result)))
+```
 
 ### restrictive bias
 _meaning_ Restricting our view 

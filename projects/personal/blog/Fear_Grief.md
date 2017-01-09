@@ -1,4 +1,6 @@
-Fear and Confidence:
+# _How running away from, steals life from you ?_
+---
+## Fear and Confidence:
 
 Fear comes from mistakes, we are not perfect. Not meant to be, yet we should try for perfection and forget our mistakes. Like a father loves his new born daughters kicks we should love our imperfections, like a cocoon from which we later learn and become a butterfly. Be compassionate to yourself. 
 
@@ -9,7 +11,7 @@ Money can also effect us badly, debt or asking for someone else money takes life
 Confidence come from repeating the same things again and again till you can do it in your head. Once confidence is gained in one field you know how to gain in any. Slowly working hard and doing the same thing give you confidence.
 
 ---
-Grief and Happiness:
+## Grief and Happiness:
 
 Grief: comes from running away from truth. Accept truth, if it is your fault covey your sadness and sorryness and let the incident go. If it is not your fault let it go, like you like others can also do mistakes, we are just a sum of event + habits + parents +envirorment +dna +mind wiring + choices. The only part we choose is choices, we cant change previous one's, only ones we can change is current choices.
 

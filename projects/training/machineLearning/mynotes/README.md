@@ -1,4 +1,8 @@
 # Machine Learning notes
+
+Learn the best hypothisis given data and some domain knowledge
+
+
 ---
 ---
 
@@ -133,5 +137,90 @@ Summary:
 * Other typical problems of the back-propagation algorithm are the speed of convergence and the possibility of ending up in a local minimum of the error function
 * Today there are practical methods that make back-propagation in multi-layer perceptrons the tool of choice for many machine learning tasks.
 
+---
+
+
+## Support vector machines
+
+Intro: For finding the best line between the linearly seperable classifications which have less data points and less features. Kernel trick can also be used for finding the nonlinear lines. SVM are machines which find optimised solutions with the help of support vectors, by maximising the distance between support vectors and possible line, 
+- using kernel trick is powerfull in finding the nonlinear classifications.  
+- The performance is O(n^3) with no of data points.
+- No of points can be decreased by using montecarlo simulations and than
+
+
+
+__Y__classification = W^T(X) + b
+
+distance between tho hyperplances is
+W^T[X1] + b = -1
+W^T[X2] + b = 1
+
+Note we are talking about linear planes only
+ (W^T/||W||)(x1-x2) =  2/||W||
+
+maximise 2/||W||
+
+
+## Instance based learning
+
+Saves all the data to databases
+
+Advantages
+
+- Remembers all the data
+- fast
+- simple 
+- realtime update
+
+Disadvantages:
+- No generalisation
+- Noise
+- Overfitting
+
+Tips:
+
+Use geolocation saving format(quadtrees) for multiple features  
+Might be possible to use neaer duplicate detection algorithms for finding the featureLazy learner, saves time untill necessary, memory intensive.
+
+### Easy to learn and time taking to query on sorted data
+
+Advantages : Knn is very good in finding the distances
+
+### Preference Bias:
+
+Data localaity, near points should have same values,
+Smoothness, we are looking at smooth function, rather than discrete functions
+All features are matter equally
+
+
+## Naive Bayes
+
+Learn the most probable H given data t domain knowledge.
+
+probabilit(h/D) where h belongs to H
+
+Chainrule: Pr(h/D) = Pr(D/h)Pr(h)/Pr(D)
+
+D -> Training data (labels)
+Pr(D)  -> probability of seeing our data
+Pr(h)  -> 
+Pr(D/h)-> data given the hypothesis
+
+
+Best hypothesis for given data is proportional to
+ - probability of Data for a given hypothesis
+ - probability of test hypothesis (near distance are more similar)
+ - prior d is normalisation term
+Read more on this
+
+### [Ensemble Learning] http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/springerEBR09.pdf
+
+Enmsemble are wonderful tools in machine learning paradigm,
+
+multiple learners are trained to solve the same problem. In contrast to onrdianry machine learning approaches which try to learn one hypothesis from training data, ensemble methods try to consturct a set of hyportheses and combine them to use.
+
+Advantages,
+
+even base week learners are used to get strong learners
 
 

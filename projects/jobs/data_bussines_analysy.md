@@ -125,4 +125,81 @@ Based upon your experience, hours per week and length of engagement, data integr
 Apply Now
 Posted By
 Heathrow, FL
+---
+
+
+---
+## Business Data Analyst: $63/hr 
+Infonet Consulting Group,  Boca Raton, FL
+
+- needs it engineering changed resume
+
+Functional Specification Documentation
+Business Requirements Gathering
+Software Development Lifecycle (SDLC)
+Project Management Lifecycle
+Excellent Written & Oral Communication Skills
+Knowledge of Database Concepts
+Microsoft Office Suite (Word, Excel, PowerPoint, Project, Visio)
+SQL/Query Tools
+Testing
+
+
+---
+---
+Job Description
+
+One of Infonet's premier clients in South Florida has an opening for a Business Data Analyst to perform detailed data analysis to help in data centric project efforts and in support of developing the business requirements.
+
+TERMS: Contract-to-Hire
+
+DURATION: Contract engagement 3 - 6 months
+
+COMPENSATION: $63.00/hr Corp-to-Corp or $58.00/hr-W2
+
+SCOPE OF WORK
+
+Perform detailed data analysis to help in data centric project efforts and in support of developing the business requirements.
+This role is critical for major data conversion projects, data warehousing and data integration efforts.
+Involved in many aspects of the project lifecycle, including requirements, design, development, testing, training and implementation.
+Familiarization with end-to-end business processes, underlying datasets, and interaction between systems.
+Produce documentation such as data profiles, data flows, data mappings, business requirements and more for the development team's audience.
+Data validation to ensure accurate conversion of data from legacy systems into new system
+Maintain thorough and complete documentation of all processes and analysis
+Proactively research existing applications and data structures
+Provide input to technical leads related to project schedules and project status updates including identification of risk and escalation of critical issues
+Create mapping documents as needed
+Adhere to SDLC processes and ensure that all reporting or project tracking needs are met
+Develop and execute test plans, test scenarios, and test scripts as needed
+Work with other IT team members in resolving existing data issues and/or project related data issues
+Maintain solid working knowledge of functionality of existing applications and systems
+Document and maintain detailed functional specifications from which system changes can be developed
+Ensure integration of automated business functions and their related data across impacted applications or tools
+Develop and maintain business process models and internal IT functional documentation for areas of responsibility
+Develop good peer to peer working relationships with both internal and external business partners
+REQUIRED SKILLS / EXPERIENCE
+
+2-4 years professional experience in developing business requirements, functional specifications, user interface specifications and documenting process flows
+Functional Specification Documentation
+Business Requirements Gathering
+Software Development Lifecycle (SDLC)
+Project Management Lifecycle
+Excellent Written & Oral Communication Skills
+Knowledge of Database Concepts
+Microsoft Office Suite (Word, Excel, PowerPoint, Project, Visio)
+SQL/Query Tools
+PREFERRED SKILLS / EXPERIENCE
+
+2-4 years’ experience working in one or more of the following roles is highly desirable: Quality Assurance analyst, System Analyst, or Data Analyst with SQL query skills
+2-4 years’ experience working with the implementation of enterprise class solutions and data warehousing or Business Intelligence
+Travel & Hospitality Experience
+
+REQUIRED EDUCATION
+
+4-year Degree in Computer Science/Information Systems or related field
+TRAVEL REQUIREMENT
+
+None
+
+
 --- 

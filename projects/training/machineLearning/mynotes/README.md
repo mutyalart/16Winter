@@ -213,7 +213,7 @@ Best hypothesis for given data is proportional to
  - prior d is normalisation term
 Read more on this
 
-### [Ensemble Learning] http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/springerEBR09.pdf
+## [Ensemble Learning](http://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/springerEBR09.pdf)
 
 Enmsemble are wonderful tools in machine learning paradigm,
 
@@ -221,6 +221,27 @@ multiple learners are trained to solve the same problem. In contrast to onrdianr
 
 Advantages,
 
-even base week learners are used to get strong learners
+- even base weak learners are used to make strong generalisations
+- neural network desicion trees or other kinds can be used as base learners
+
+first base learners are produced which can be generated in a prallel style or series. Base learners are combined to use.
+
+- weighted averaging for regression
+- majority voting for classification
+
+### Preference bias:
+For higher accuracy the base learners are to be as accurate as possible.
+The data should be diverse, like in the example of capturing the data in complex shape we used diverse cicles are modeled the data inside the circles.
+- subsampling the training data
+- manipulating the attributes 
+- manipulating the output
+- injecting randomness into learning algorithms
+
+### Assembly
+
+- boosting
+- bagging
+- stacking
 
 
+Boosting: Ada boost,

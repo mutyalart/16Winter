@@ -20,3 +20,16 @@ https://www.safaribooksonline.com/library/view/allgorithms-of-the/9781617292583/
 		- neural nets
 		- decision trees
 		- svm
+
+
+https://heuristicswiki.wikispaces.com/
+
+real world algorithms, instead of searching for optimal solutions heuristic algorithms help in finding the near optimal solutions. 
+- based on  common sense logic
+- experience
+- space and time constraints
+
+Examples:
+
+1 Pattern database: storing the possible solutions of a function in a database
+2 

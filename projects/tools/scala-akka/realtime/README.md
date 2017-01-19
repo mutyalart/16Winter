@@ -1,5 +1,3 @@
-This is for kafka and flume 
-
-ems queue
+This is for kafka , flume, Sqoop, ZeroMQ ,Ems queue, Reactive Systems
 
 realtime pipeline books

@@ -93,9 +93,7 @@ Testing setup :
 
 `
 $spark-shell  
-
 $sparkR  
-
 `
 
 - Run inbuilt examples:
